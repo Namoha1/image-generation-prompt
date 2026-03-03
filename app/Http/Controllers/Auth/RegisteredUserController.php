@@ -34,7 +34,7 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        Auth::login($user);
+        // Auth::login($user); as only API so we will not login the user after registration, instead we will return no content response
 
         return response()->noContent();
     }

@@ -20,3 +20,5 @@ Route::middleware(['auth:sanctum'])->group(function () {
         Route::apiResource('image-generation', ImageGenerationController::class)->only(['index', 'store']);
     });
 });
+
+require __DIR__.'/auth.php';
